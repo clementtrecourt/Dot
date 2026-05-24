@@ -43,6 +43,7 @@ if status is-interactive
     abbr gsh 'git show'
     abbr gf 'git fetch'
     abbr gcl 'git clone'
+    abbr n 'nvim'
 
 
     function mark_prompt_start --on-event fish_prompt
