@@ -1,58 +1,56 @@
-if status is-interactive
-    # Starship custom prompt
-    starship init fish | source
+# ~/.config/fish/config.fish
 
-    # Direnv + Zoxide
-    command -v direnv &>/dev/null && direnv hook fish | source
-    command -v zoxide &>/dev/null && zoxide init fish --cmd cd | source
+# 1. Variables et chemins globaux (qui doivent être dispo même en non-interactif)
+fish_add_path "$HOME/.local/bin"
 
-    # Better ls
-    alias ls='eza --icons --group-directories-first -1'
-
-    # Abbrs
-    abbr lg lazygit
-    abbr gd 'git diff'
-    abbr ga 'git add .'
-    abbr gc 'git commit -am'
-    abbr gl 'git log'
-    abbr gs 'git status'
-    abbr gst 'git stash'
-    abbr gsp 'git stash pop'
-    abbr gp 'git push'
-    abbr gpl 'git pull'
-    abbr gsw 'git switch'
-    abbr gsm 'git switch main'
-    abbr gb 'git branch'
-    abbr gbd 'git branch -d'
-    abbr gco 'git checkout'
-    abbr gsh 'git show'
-
-    abbr l ls
-    abbr ll 'ls -l'
-    abbr la 'ls -a'
-    abbr lla 'ls -la'
-
-    # Custom colours
-    # cat ~/.local/state/caelestia/sequences.txt 2>/dev/null
-
-    # For jumping between prompts in foot terminal
-    function mark_prompt_start --on-event fish_prompt
-        echo -en "\e]133;A\e\\"
-    end
-
-    # Custom fish config
-    # source ~/.config/caelestia/user-config.fish 2>/dev/null
-end
 if test (tty) = /dev/tty1
     exec mango
 end
 
-fish_add_path "$HOME/.local/bin"
+# 2. Configuration interactive
+if status is-interactive
+    # Starship custom prompt
+    starship init fish | source
 
-# MonkeyLauncher CLI
-# alias MonkeyLauncher='/home/clem/.local/bin/MonkeyLauncherCLI'
-# Lancer tmux automatiquement si on n'est pas déjà dans une session tmux
-if status --is-interactive
-    and not set -q TMUX
-    tmux attach-session -t main || tmux new-session -s main
+    # Direnv + Zoxide (Syntaxe idiomatique Fish)
+    type -q direnv; and direnv hook fish | source
+    type -q zoxide; and zoxide init fish --cmd cd | source
+
+    # Better ls (eza) - sans le -1 pour ne pas casser ll ou lla
+    alias ls='eza --icons --group-directories-first'
+
+    abbr l 'ls -1'
+    abbr ll 'ls -l'
+    abbr la 'ls -a'
+    abbr lla 'ls -la'
+
+    # Git Abbrs
+    abbr lg lazygit
+    abbr gs 'git status'
+    abbr ga 'git add .'
+    abbr gc 'git commit -am'
+    abbr gd 'git diff'
+    abbr gl 'git log'
+    abbr gp 'git push'
+    abbr gpl 'git pull'
+    abbr gco 'git checkout'
+    abbr gsw 'git switch'
+    abbr gsm 'git switch main'
+    abbr gb 'git branch'
+    abbr gbd 'git branch -d'
+    abbr gst 'git stash'
+    abbr gsp 'git stash pop'
+    abbr gsh 'git show'
+    abbr gf 'git fetch'
+    abbr gcl 'git clone'
+
+
+    function mark_prompt_start --on-event fish_prompt
+        echo -en "\e]133;A\e\\"
+    end
+
+    if not set -q TMUX
+        # 'exec' remplace le shell par tmux. '-A' attache à la session 'main' ou la crée.
+        exec tmux new-session -A -s main
+    end
 end
