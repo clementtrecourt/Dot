@@ -93,8 +93,8 @@
                     "colorizeSystemIcon": "none",
                     "colorizeSystemText": "none",
                     "customIconPath": "",
-                    "enableColorization": false,
-                    "icon": "rocket",
+                    "enableColorization": true,
+                    "icon": "grid-dots",
                     "iconColor": "none",
                     "id": "Launcher",
                     "useDistroLogo": false
