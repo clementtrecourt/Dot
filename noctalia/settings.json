@@ -547,37 +547,37 @@
             {
                 "action": "suspend",
                 "command": "",
-                "countdownEnabled": true,
-                "enabled": false,
-                "keybind": ""
-            },
-            {
-                "action": "hibernate",
-                "command": "",
-                "countdownEnabled": true,
-                "enabled": false,
-                "keybind": ""
-            },
-            {
-                "action": "reboot",
-                "command": "",
                 "countdownEnabled": false,
                 "enabled": true,
                 "keybind": "2"
             },
             {
-                "action": "logout",
+                "action": "hibernate",
                 "command": "",
                 "countdownEnabled": false,
                 "enabled": true,
                 "keybind": "3"
             },
             {
-                "action": "shutdown",
+                "action": "reboot",
                 "command": "",
                 "countdownEnabled": false,
                 "enabled": true,
                 "keybind": "4"
+            },
+            {
+                "action": "logout",
+                "command": "",
+                "countdownEnabled": false,
+                "enabled": true,
+                "keybind": "5"
+            },
+            {
+                "action": "shutdown",
+                "command": "",
+                "countdownEnabled": false,
+                "enabled": true,
+                "keybind": "6"
             },
             {
                 "action": "rebootToUefi",
