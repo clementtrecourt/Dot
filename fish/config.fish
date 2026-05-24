@@ -53,7 +53,6 @@ fish_add_path "$HOME/.local/bin"
 # alias MonkeyLauncher='/home/clem/.local/bin/MonkeyLauncherCLI'
 # Lancer tmux automatiquement si on n'est pas déjà dans une session tmux
 if status --is-interactive
-    if not set -q TMUX
-        tmux
-    end
+    and not set -q TMUX
+    tmux attach-session -t main || tmux new-session -s main
 end
