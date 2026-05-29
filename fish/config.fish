@@ -4,7 +4,7 @@
 fish_add_path "$HOME/.local/bin"
 
 if test (tty) = /dev/tty1
-    exec mango
+    exec start-hyprland
 end
 
 # 2. Configuration interactive
@@ -43,8 +43,7 @@ if status is-interactive
     abbr gsh 'git show'
     abbr gf 'git fetch'
     abbr gcl 'git clone'
-    abbr n 'nvim'
-
+    abbr n nvim
 
     function mark_prompt_start --on-event fish_prompt
         echo -en "\e]133;A\e\\"
