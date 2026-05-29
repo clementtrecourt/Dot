@@ -60,7 +60,7 @@
         "middleClickCommand": "",
         "middleClickFollowMouse": false,
         "monitors": [
-            "DP-3"
+            "DP-2"
         ],
         "mouseWheelAction": "none",
         "mouseWheelWrap": true,
@@ -73,7 +73,7 @@
         "screenOverrides": [
             {
                 "enabled": true,
-                "name": "HDMI-A-3"
+                "name": "DP-1"
             }
         ],
         "showCapsule": false,
@@ -428,7 +428,7 @@
         "firstDayOfWeek": -1,
         "hideWeatherCityName": false,
         "hideWeatherTimezone": false,
-        "name": "Paris",
+        "name": "Romillé",
         "showCalendarEvents": true,
         "showCalendarWeather": true,
         "showWeekNumberInCalendar": false,
