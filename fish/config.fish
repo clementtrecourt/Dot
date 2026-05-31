@@ -4,7 +4,7 @@
 fish_add_path "$HOME/.local/bin"
 
 if test (tty) = /dev/tty1
-    exec start-hyprland
+    exec mango
 end
 
 # 2. Configuration interactive
