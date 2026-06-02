@@ -18,7 +18,7 @@ if status is-interactive
 
     # Better ls (eza) - sans le -1 pour ne pas casser ll ou lla
     alias ls='eza --icons --group-directories-first'
-
+    abbr dev 'docker run -it --rm -v "$(pwd):/workspace" -w /workspace arch-sysadmin'
     abbr l 'ls -1'
     abbr ll 'ls -l'
     abbr la 'ls -a'

@@ -19,6 +19,14 @@ return {
 		},
 	},
 
+	"zaldih/themery.nvim",
+	lazy = false,
+	config = function()
+		require("themery").setup({
+			themes = { "gruvbox", "ayu", "nord", "onedark", "dracula", "tokyonight", "catppuccino" },
+			livePreview = true,
+		})
+	end,
 	-- ────────────────────────────────────────────
 	-- Telescope : fuzzy finder universel
 	-- ────────────────────────────────────────────
