@@ -6,7 +6,12 @@ fish_add_path "$HOME/.local/bin"
 if test (tty) = /dev/tty1
     exec mango
 end
+if not set -q SSH_AUTH_SOCK
+    ssh-agent -c | source
+end
 
+ssh-add -l >/dev/null 2>&1
+or ssh-add ~/.ssh/id_ed25519
 # 2. Configuration interactive
 if status is-interactive
     # Starship custom prompt
@@ -18,7 +23,7 @@ if status is-interactive
 
     # Better ls (eza) - sans le -1 pour ne pas casser ll ou lla
     alias ls='eza --icons --group-directories-first'
-    abbr dev 'docker run -it --rm -v "$(pwd):/workspace" -w /workspace arch-sysadmin'
+    abbr dev '~/Code/devcontainer/adm.sh'
     abbr l 'ls -1'
     abbr ll 'ls -l'
     abbr la 'ls -a'
