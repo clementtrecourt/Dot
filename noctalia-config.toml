@@ -1,0 +1,172 @@
+[audio]
+enable_sounds = true
+
+[bar.default]
+background_opacity = 0.15999999642372131
+capsule_opacity = 0.3899999912828207
+end = [ "media", "tray", "volume", "control-center", "session" ]
+margin_edge = 0.0
+margin_ends = 0.0
+position = "left"
+radius = 0
+shadow = false
+start = [ "workspaces" ]
+thickness = 25
+
+[calendar]
+enabled = true
+
+[control_center]
+sidebar = "full"
+sidebar_section = "full"
+
+    [[control_center.shortcuts]]
+    type = "wifi"
+
+    [[control_center.shortcuts]]
+    type = "caffeine"
+
+    [[control_center.shortcuts]]
+    type = "nightlight"
+
+    [[control_center.shortcuts]]
+    type = "power_profile"
+
+    [[control_center.shortcuts]]
+    type = "session"
+
+[desktop_widgets]
+enabled = false
+schema_version = 1
+widget_order = [ "desktop-widget-0000000000000001", "desktop-widget-0000000000000002" ]
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000001]
+    cx = 245.27507019042969
+    cy = 908.3321533203125
+    output = "DP-3"
+    rotation = 0.0
+    scale = 1.9697229862213135
+    type = "sysmon"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000001.settings]
+        stat2 = "ram_pct"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000002]
+    cx = 1780.0
+    cy = 986.0
+    output = "DP-3"
+    rotation = 0.0
+    scale = 1.0
+    type = "weather"
+
+[dock]
+active_monitor_only = true
+background_opacity = 0.14999999664723873
+icon_size = 24
+shadow = false
+show_dots = true
+
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = true
+    timeout = 600
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = true
+    timeout = 900
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = true
+    timeout = 660
+
+[location]
+address = "Toulon, France"
+
+[lockscreen]
+wallpaper_blur_intensity = 0.70999998413026333
+wallpaper_tint_intensity = 0.1099999975413084
+
+[osd]
+position = "top_right"
+
+[shell]
+password_style = "random"
+screen_time_enabled = true
+settings_show_advanced = true
+
+    [shell.animation]
+    speed = 2.1000000312924385
+
+    [shell.panel]
+    borders = false
+    launcher_categories = false
+    open_near_click_control_center = true
+    session_placement = "centered"
+    shadow = false
+    transparency_mode = "glass"
+
+    [shell.shadow]
+    alpha = 0.2799999937415123
+
+[theme]
+builtin = "Catppuccin"
+community_palette = "Monochrome"
+source = "wallpaper"
+
+    [theme.templates]
+    builtin_ids = [ "alacritty", "foot", "gtk3", "gtk4", "kcolorscheme", "kitty", "mango", "qt", "starship" ]
+    community_ids = [ "vicinae", "yazi" ]
+
+[wallpaper]
+directory = "/home/clem/Pictures/Wallpapers/"
+transition = [ "disc", "fade", "honeycomb", "stripes", "wipe", "zoom" ]
+
+    [wallpaper.default]
+    path = "/home/clem/Pictures/Wallpapers/luca-bravo-zAjdgNXsMeg-unsplash.jpg"
+
+    [wallpaper.last]
+    path = "/home/clem/Pictures/Wallpapers/luca-bravo-zAjdgNXsMeg-unsplash.jpg"
+
+    [wallpaper.monitors.DP-3]
+    path = "/home/clem/Pictures/Wallpapers/luca-bravo-zAjdgNXsMeg-unsplash.jpg"
+
+    [wallpaper.monitors.HDMI-A-3]
+    path = "/home/clem/Pictures/Wallpapers/luca-bravo-zAjdgNXsMeg-unsplash.jpg"
+
+    [[wallpaper.favorite]]
+    palette_source = "wallpaper"
+    path = "/home/clem/Pictures/Wallpapers/os-x-mavericks-tide-3840x2160-24077.jpg"
+    theme_mode = "dark"
+    wallpaper_scheme = "m3-content"
+
+[weather]
+address = "Toulon"
+effects = false
+
+[widget.bongocat]
+script = "scripts/bongocat.lua"
+type = "scripted"
+
+[widget.session]
+capsule = true
+color = "#FF3B30"
+
+[widget.tray]
+drawer = true
+
+[widget.volume]
+show_label = false
+
+[widget.workspaces]
+capsule = true
+hide_when_empty = true
