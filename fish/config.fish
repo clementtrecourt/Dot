@@ -1,19 +1,9 @@
-# ~/.config/fish/config.fish
-
-# 1. Variables et chemins globaux (qui doivent être dispo même en non-interactif)
-fish_add_path "$HOME/.local/bin"
-
-if test (tty) = /dev/tty1
-    exec mango
-end
 if not set -q SSH_AUTH_SOCK
     ssh-agent -c | source
 end
 
 ssh-add -l >/dev/null 2>&1
 or ssh-add ~/.ssh/id_ed25519
-
-# 2. Configuration interactive
 if status is-interactive
     # Starship custom prompt
     command -v starship &> /dev/null && starship init fish | source
@@ -22,19 +12,19 @@ if status is-interactive
     command -v direnv &> /dev/null && direnv hook fish | source
     command -v zoxide &> /dev/null && zoxide init fish --cmd cd | source
 
-    # Better ls (eza)
+    # Better ls
     command -v eza &> /dev/null && alias ls='eza --icons --group-directories-first -1'
 
-    # Abbrs
+    # Better ls (eza) - sans le -1 pour ne pas casser ll ou lla
+    alias ls='eza --icons --group-directories-first'
     abbr dev '~/Code/devcontainer/adm.sh'
-    abbr n 'nvim'
-    abbr l 'ls'
+    abbr l 'ls -1'
     abbr ll 'ls -l'
     abbr la 'ls -a'
     abbr lla 'ls -la'
 
     # Git Abbrs
-    abbr lg 'lazygit'
+    abbr lg lazygit
     abbr gs 'git status'
     abbr ga 'git add .'
     abbr gc 'git commit -am'
@@ -52,10 +42,19 @@ if status is-interactive
     abbr gsh 'git show'
     abbr gf 'git fetch'
     abbr gcl 'git clone'
+    abbr n nvim
 
-    # Custom colours (skip inside tmux to avoid double-escape-sequence colour bugs)
-    if not set -q TMUX
-        cat ~/.local/state/caelestia/sequences.txt 2> /dev/null
+    # NixOS
+    abbr nrs 'sudo nixos-rebuild switch --flake /etc/nixos#home'
+    abbr nrb 'sudo nixos-rebuild boot   --flake /etc/nixos#home'
+    abbr nrd 'sudo nixos-rebuild switch --flake /etc/nixos#home --show-trace 2>&1 | less'
+    abbr nrg 'sudo nix-collect-garbage -d && sudo nix store optimise'
+    abbr nru 'sudo nix flake update /etc/nixos'
+    abbr nsh 'nix-shell -p'
+    abbr npk 'nix search nixpkgs'
+    # Custom colours
+    if not set -q TMUX; and test -f ~/.local/state/caelestia/sequences.txt
+        cat ~/.local/state/caelestia/sequences.txt
     end
 
     # For jumping between prompts in foot terminal
@@ -63,10 +62,9 @@ if status is-interactive
         echo -en "\e]133;A\e\\"
     end
 
-    # Custom fish config (caelestia)
+    # Custom fish config
     set -q XDG_CONFIG_HOME && set -l cConf $XDG_CONFIG_HOME/caelestia || set -l cConf $HOME/.config/caelestia
     source $cConf/user-config.fish 2> /dev/null
-
     if not set -q TMUX
         # 'exec' remplace le shell par tmux. '-A' attache à la session 'main' ou la crée.
         exec tmux new-session -A -s main
