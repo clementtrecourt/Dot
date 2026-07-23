@@ -1,8 +1,0 @@
-require("modules.monitor")
-require("modules.env")
-require("modules.autostart")
-require("modules.look")
-require("modules.input")
-require("modules.keybinds")
-require("modules.rules")
-require("noctalia")

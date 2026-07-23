@@ -1,0 +1,40 @@
+{
+    "appearance": {
+        "transparency": {
+            "enabled": true
+        }
+    },
+    "bar": {
+        "activeWindow": {
+            "compact": true
+        },
+        "clock": {
+            "background": true,
+            "showDate": false
+        },
+        "status": {
+            "showAudio": false,
+            "showBattery": false,
+            "showBluetooth": false,
+            "showNetwork": true,
+            "showWifi": false
+        },
+        "tray": {
+            "background": false,
+            "compact": false,
+            "recolour": false
+        },
+        "workspaces": {
+            "activeIndicator": true,
+            "activeTrail": false,
+            "occupiedBg": false,
+            "perMonitorWorkspaces": true,
+            "showWindows": false,
+            "showWindowsOnSpecialWorkspaces": true
+        }
+    },
+    "services": {
+        "useFahrenheit": false,
+        "useTwelveHourClock": false
+    }
+}
