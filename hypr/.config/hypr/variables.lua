@@ -83,9 +83,9 @@ return {
     kbCloseWindow              = "SUPER + Q",
 
     -- Special workspaces toggles
-    kbSpecialWs                = "SUPER + S",
+    kbSpecialWs                = "SUPER + M",
     kbSystemMonitorWs          = "CTRL + SHIFT + Escape",
-    kbMusicWs                  = "SUPER + M",
+    kbMusicWs                  = "SUPER + S",
     kbCommunicationWs          = "SUPER + D",
     kbTodoWs                   = "SUPER + R",
 
