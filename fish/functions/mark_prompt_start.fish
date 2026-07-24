@@ -1,0 +1,1 @@
+/nix/store/jdpaw5c8qgagqjnfdi71hl7q3cfcawh8-home-manager-files/.config/fish/functions/mark_prompt_start.fish
