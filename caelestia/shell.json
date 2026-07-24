@@ -400,18 +400,18 @@
                     "inhibitWhenAudio": false,
                     "inhibitWhenCharging": false,
                     "respectInhibitors": true,
-                    "timeout": 180
+                    "timeout": 180000
                 },
                 {
                     "idleAction": "dpms off",
                     "returnAction": "dpms on",
-                    "timeout": 300
+                    "timeout": 300000
                 },
                 {
                     "idleAction": [
                         "suspendThenHibernate"
                     ],
-                    "timeout": 600
+                    "timeout": 600000
                 }
             ]
         },
