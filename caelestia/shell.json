@@ -306,10 +306,10 @@
             "capitalisation": "preserve",
             "label": "  ",
             "maxWindowIcons": 5,
-            "occupiedBg": false,
-            "occupiedLabel": "󰮯",
+            "occupiedBg": true,
+            "occupiedLabel": "",
             "perMonitorWorkspaces": true,
-            "showWindows": true,
+            "showWindows": false,
             "showWindowsOnSpecialWorkspaces": true,
             "shown": 5,
             "specialWorkspaceIcons": [
