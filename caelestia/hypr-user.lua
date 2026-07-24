@@ -5,5 +5,11 @@ if hostname == "home" then
 else
     require("monitors-work")
 end
+hl.config({
+    input = {
+        kb_layout          = "qwerty-fr",
+    },
+})
+
 
 hl.exec_cmd("hyprshade auto")
