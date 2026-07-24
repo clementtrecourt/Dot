@@ -45,9 +45,14 @@ if status is-interactive
     abbr n nvim
 
     # NixOS
-    abbr nrs 'sudo nixos-rebuild switch --flake /etc/nixos#work'
-    abbr nrb 'sudo nixos-rebuild boot   --flake /etc/nixos#work'
-    abbr nrd 'sudo nixos-rebuild switch --flake /etc/nixos#work --show-trace 2>&1 | less'
+    function nrs
+        if test (hostname) = nixos-work
+            sudo nixos-rebuild switch --flake /etc/nixos#work
+        else
+            sudo nixos-rebuild switch --flake /etc/nixos#home
+        end
+    end
+
     abbr nrg 'sudo nix-collect-garbage -d && sudo nix store optimise'
     abbr nru 'sudo nix flake update /etc/nixos'
     abbr nsh 'nix-shell -p'
