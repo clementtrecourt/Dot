@@ -6,14 +6,14 @@ ssh-add -l >/dev/null 2>&1
 or ssh-add ~/.ssh/id_ed25519
 if status is-interactive
     # Starship custom prompt
-    command -v starship &> /dev/null && starship init fish | source
+    command -v starship &>/dev/null && starship init fish | source
 
     # Direnv + Zoxide
-    command -v direnv &> /dev/null && direnv hook fish | source
-    command -v zoxide &> /dev/null && zoxide init fish --cmd cd | source
+    command -v direnv &>/dev/null && direnv hook fish | source
+    command -v zoxide &>/dev/null && zoxide init fish --cmd cd | source
 
     # Better ls
-    command -v eza &> /dev/null && alias ls='eza --icons --group-directories-first -1'
+    command -v eza &>/dev/null && alias ls='eza --icons --group-directories-first -1'
 
     # Better ls (eza) - sans le -1 pour ne pas casser ll ou lla
     alias ls='eza --icons --group-directories-first'
@@ -45,9 +45,9 @@ if status is-interactive
     abbr n nvim
 
     # NixOS
-    abbr nrs 'sudo nixos-rebuild switch --flake /etc/nixos#home'
-    abbr nrb 'sudo nixos-rebuild boot   --flake /etc/nixos#home'
-    abbr nrd 'sudo nixos-rebuild switch --flake /etc/nixos#home --show-trace 2>&1 | less'
+    abbr nrs 'sudo nixos-rebuild switch --flake /etc/nixos#work'
+    abbr nrb 'sudo nixos-rebuild boot   --flake /etc/nixos#work'
+    abbr nrd 'sudo nixos-rebuild switch --flake /etc/nixos#work --show-trace 2>&1 | less'
     abbr nrg 'sudo nix-collect-garbage -d && sudo nix store optimise'
     abbr nru 'sudo nix flake update /etc/nixos'
     abbr nsh 'nix-shell -p'
@@ -64,7 +64,7 @@ if status is-interactive
 
     # Custom fish config
     set -q XDG_CONFIG_HOME && set -l cConf $XDG_CONFIG_HOME/caelestia || set -l cConf $HOME/.config/caelestia
-    source $cConf/user-config.fish 2> /dev/null
+    source $cConf/user-config.fish 2>/dev/null
     if not set -q TMUX
         # 'exec' remplace le shell par tmux. '-A' attache à la session 'main' ou la crée.
         exec tmux new-session -A -s main
