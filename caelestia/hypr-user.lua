@@ -14,3 +14,4 @@ hl.config({
 
 hl.exec_cmd("hyprshade auto")
 hl.bind("SUPER + P", hl.dsp.exec_cmd("hyprshot -m region --freeze"))
+hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
