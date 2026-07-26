@@ -1,6 +1,6 @@
 local hostname = io.popen("hostname"):read("*l")
 
-if hostname == "home" then
+if hostname == "nixos" then
     require("monitors")
 else
     require("monitors-work")
@@ -13,3 +13,4 @@ hl.config({
 
 
 hl.exec_cmd("hyprshade auto")
+hl.bind("SUPER + P", hl.dsp.exec_cmd("hyprshot -m region --freeze"))
