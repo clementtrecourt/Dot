@@ -570,6 +570,8 @@
         "enableDangerousActions": false,
         "enabled": true,
         "favouriteApps": [
+            "zen-beta",
+            "teams-for-linux"
         ],
         "hiddenApps": [
         ],

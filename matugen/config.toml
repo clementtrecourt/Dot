@@ -1,0 +1,76 @@
+[config]
+contrast = 0.1
+theme = "dark" 
+
+[templates.cal]
+input_path = '~/.config/matugen/templates/cal-temp.sh'
+output_path = '~/.local/bin/cal.sh'
+
+[templates.niri]
+input_path = '~/.config/matugen/templates/niri-colors.kdl'
+output_path = '~/.config/niri/colors.kdl'
+
+[templates.kitty]
+input_path  = '~/.config/matugen/templates/kitty-colors.conf'
+output_path = '~/.config/kitty/colors.conf'
+
+[templates.dunst]
+input_path = '~/.config/matugen/templates/dunst.conf'
+output_path = '~/.config/dunst/dunstrc'
+
+[templates.rofi]
+input_path  = '~/.config/matugen/templates/rofi-colors.rasi'
+output_path = '~/.config/rofi/colors.rasi'
+
+[templates.btop]
+input_path = '~/.config/matugen/templates/btop.theme'
+output_path = '~/.config/btop/themes/matugen.theme'
+
+[templates.gtk3]
+input_path = '~/.config/matugen/templates/matugen-gtk.css'
+output_path = '~/.config/gtk-3.0/colors.css'
+post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-dark'
+
+[templates.gtk4]
+input_path = '~/.config/matugen/templates/matugen-gtk.css'
+output_path = '~/.config/gtk-4.0/colors.css'
+
+[templates.clipse]
+input_path = "~/.config/matugen/templates/clipse.json"
+output_path = "~/.config/clipse/theme.json"
+
+[templates.waybar]
+input_path  = '~/.config/matugen/templates/waybar-colors.css'
+output_path = '~/.config/waybar/colors.css'
+
+[templates.chromium]
+input_path  = '~/.config/matugen/templates/root.css'
+output_path = '~/code/tab-v3/color.css'
+
+[templates.zathura]
+input_path = '~/.config/matugen/templates/zathurarc'
+output_path = '~/.config/zathura/zathurarc'
+
+[templates.swaylock]
+input_path  = '~/.config/matugen/templates/swaylock.conf'
+output_path = '~/.config/swaylock/config'
+
+[templates.cava]
+input_path = '~/.config/matugen/templates/cava-colors.ini'
+output_path = '~/.config/cava/themes/matugen'
+
+[templates.lualine]
+input_path  = '~/.config/matugen/templates/colors_lualine.lua'
+output_path = '~/.config/nvim/after/plugin/matugen_colors.lua'
+
+[templates.spotify]
+input_path = '~/.config/matugen/templates/spice-color.ini'
+output_path = '~/.config/spicetify/Themes/text/color.ini'
+
+[templates.starship]
+input_path = '~/.config/matugen/templates/starship.toml'
+output_path = '~/.config/starship-matugen.toml'
+
+[templates.fish]
+input_path = '~/.config/matugen/templates/matugen.fish'
+output_path = '~/.config/fish/conf.d/matugen.fish'

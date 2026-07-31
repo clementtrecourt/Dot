@@ -1,0 +1,202 @@
+window-rule {
+    draw-border-with-background false
+}
+
+window-rule {
+  match title="zen-beta"
+  open-on-workspace "1"
+  open-maximized true
+}
+
+window-rule {
+    match app-id="quickshell$"
+    open-floating true
+    default-column-width { fixed 952; }
+    default-window-height { fixed 459; }
+    background-effect {
+        blur true
+        saturation 0.8
+    }
+    default-floating-position x=10 y=10 relative-to="top-right"
+}
+
+window-rule {
+  match title="Helium"
+  open-maximized true
+}
+
+
+window-rule {
+  match title="LimbusCompany"
+  open-maximized true
+}
+
+window-rule {
+    match app-id="clipse$"
+    open-floating true
+    default-column-width { fixed 922; }
+    default-window-height { fixed 652; }
+    background-effect {
+        blur true
+        saturation 0.8
+    }
+}
+
+window-rule {
+    match app-id="note"
+    background-effect {
+        saturation 0.95
+        blur true
+    }
+}
+window-rule {
+    match app-id="kitty"
+    background-effect {
+        saturation 0.95
+        blur true
+    }
+}
+
+window-rule {
+    match app-id="org.pwmt.zathura"
+    background-effect {
+        blur true
+        saturation 0.8
+    }
+}
+window-rule {
+    match app-id="nwg-look"
+    background-effect {
+        blur true
+    }
+}
+
+window-rule {
+    match app-id="note$"
+    open-floating true
+    default-column-width { fixed 900; }
+    default-window-height { fixed 800; }
+}
+
+window-rule {
+    match app-id="calcurse$"
+    open-floating true
+    default-column-width { fixed 922; }
+    default-window-height { fixed 1150; }
+    background-effect {
+        blur true
+        saturation 0.85
+    }
+}
+
+
+window-rule {
+    match app-id="kittyfloat$"
+    open-floating true
+    default-column-width { fixed 922; }
+    default-window-height { fixed 577; }
+    default-floating-position x=0 y=13 relative-to="bottom"
+}
+
+window-rule {
+    match app-id="xdg-desktop-portal-gtk"
+    background-effect {
+        blur true
+    }
+    popups {
+        geometry-corner-radius 0
+        background-effect {
+            blur true
+        }
+    }
+   
+    min-width 952
+    min-height 576 
+    max-width 952
+    max-height 1156
+    
+    open-floating true
+}
+layer-rule {
+    match namespace="waybar"
+    background-effect {
+        blur true
+    }
+}
+
+window-rule {
+    match app-id="org.pulseaudio.pavucontrol"
+    background-effect {
+        blur true
+    }
+}
+
+window-rule {
+    match app-id="[Tt]hunar"
+    background-effect {
+        blur true
+    }
+    popups {
+        geometry-corner-radius 0
+        background-effect {
+            blur true
+        }
+    }
+}
+
+window-rule {
+    match app-id="^zen"
+    draw-border-with-background false
+    background-effect {
+        blur true
+    }
+}
+
+
+layer-rule {
+    match namespace="^rofi$"
+    background-effect {
+        blur true
+        saturation 0.9
+    }
+}
+
+layer-rule {
+    match namespace="^notifications$"
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+window-rule {
+  match title="New Tab - Helium"
+  opacity 0.88
+  background-effect {
+      blur true
+      saturation 0.85
+  }
+}
+window-rule {
+  match app-id="[Ss]potify$"
+  opacity 0.85
+  open-maximized true
+  open-on-workspace "4"
+  background-effect {
+      blur true
+  }
+}
+
+layer-rule {
+    match namespace="^awww-daemon$"
+    place-within-backdrop false 
+}
+
+
+layer-rule {
+    match namespace="^wallpaper$"
+    place-within-backdrop true
+}
+layout {
+    background-color "transparent"
+}

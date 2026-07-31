@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // ============================================================
 // Niri config — Catppuccin Mocha
 // À placer dans ~/.config/niri/config.kdl
@@ -43,11 +44,28 @@ output "eDP-1" {
 prefer-no-csd
 
 screenshot-path "~/Images/Screenshots/niri-%Y-%m-%d-%H-%M-%S.png"
+=======
+include "~/.config/niri/colors.kdl"
+include "~/.config/niri/inputs.kdl"
+include "~/.config/niri/outputs.kdl"
+include "~/.config/niri/layout.kdl"
+include "~/.config/niri/startup.kdl"
+include "~/.config/niri/rules.kdl"
+include "~/.config/niri/binds.kdl"
+
+prefer-no-csd
+
+// debug {
+//     render-drm-device "/dev/dri/renderD129"
+//     ignore-drm-device "/dev/dri/renderD128"
+// }
+>>>>>>> d3d9b9a (fix)
 
 hotkey-overlay {
     skip-at-startup
 }
 
+<<<<<<< HEAD
 // ---------- Démarrage ----------
 spawn-at-startup "waybar"
 spawn-at-startup "mako"
@@ -306,3 +324,6 @@ environment {
     MOZ_ENABLE_WAYLAND "1"
     NIXOS_OZONE_WL "1"
 }
+=======
+screenshot-path "~/pics/ss/%d-%m-%Y_%H:%M.png"
+>>>>>>> d3d9b9a (fix)

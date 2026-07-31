@@ -1,7 +1,7 @@
 if not set -q SSH_AUTH_SOCK
     ssh-agent -c | source
 end
-
+source ~/.config/fish/conf.d/matugen.fish
 ssh-add -l >/dev/null 2>&1
 or ssh-add ~/.ssh/id_ed25519
 if status is-interactive
@@ -58,9 +58,6 @@ if status is-interactive
     abbr nsh 'nix-shell -p'
     abbr npk 'nix search nixpkgs'
     # Custom colours
-    if not set -q TMUX; and test -f ~/.local/state/caelestia/sequences.txt
-        cat ~/.local/state/caelestia/sequences.txt
-    end
 
     # For jumping between prompts in foot terminal
     function mark_prompt_start --on-event fish_prompt
@@ -68,7 +65,7 @@ if status is-interactive
     end
 
     # Custom fish config
-    set -q XDG_CONFIG_HOME && set -l cConf $XDG_CONFIG_HOME/caelestia || set -l cConf $HOME/.config/caelestia
+    # set -q XDG_CONFIG_HOME && set -l cConf $XDG_CONFIG_HOME/caelestia || set -l cConf $HOME/.config/caelestia
     source $cConf/user-config.fish 2>/dev/null
     if not set -q TMUX
         # 'exec' remplace le shell par tmux. '-A' attache à la session 'main' ou la crée.

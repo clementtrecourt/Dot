@@ -233,4 +233,7 @@ disabled = true
 
 
 
+palette = "matugen"
 
+[palettes.matugen]
+# remplacé automatiquement
