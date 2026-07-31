@@ -22,7 +22,7 @@ binds {
     super+Space { spawn "~/.local/bin/filerofi.sh"; }
     super+T { spawn-sh "~/.local/bin/todo.sh"; }
     super+n { spawn-sh "~/.local/bin/note.sh"; }
-    super+shift+n { spawn-sh "~/.local/bin/dunst.sh"; }
+    // super+shift+n { spawn-sh "~/.local/bin/dunst.sh"; }
     super+shift+d { spawn-sh "~/.local/bin/dnd-toggle.sh"; }
     super+S { spawn "~/.local/bin/focus-spotify.sh"; }
     super+P { spawn "~/.local/bin/powermenu.sh"; }
@@ -157,10 +157,9 @@ binds {
     super+Ctrl+WheelScrollUp   { set-column-width "+5%"; }
 
     // === Audio, Brightness & Media Keys ===
-    XF86AudioPlay  allow-when-locked=true { spawn-sh "playerctl play-pause"; }
-    XF86AudioStop  allow-when-locked=true { spawn-sh "playerctl stop"; }
-    XF86AudioPrev  allow-when-locked=true { spawn-sh "playerctl previous"; }
-    XF86AudioNext  allow-when-locked=true { spawn-sh "playerctl next"; }
+    super+shift+b  allow-when-locked=true { spawn-sh "playerctl play-pause"; }
+    super+shift+n  allow-when-locked=true { spawn-sh "playerctl previous"; }
+    super+shift+m  allow-when-locked=true { spawn-sh "playerctl next"; }
 
     XF86AudioRaiseVolume { spawn "~/.local/bin/dunstvol.sh" "up"; }
     XF86AudioLowerVolume { spawn "~/.local/bin/dunstvol.sh" "down"; }
