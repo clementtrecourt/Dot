@@ -87,6 +87,7 @@ scheme-vibrant"
   if [ ! -f "$BLURRED" ]; then
     magick "$SELECTED" -resize 50% -blur 0x15 -resize 200% "$BLURRED"
   fi
+  ln -sf "$BLURRED" "$BLUR_CACHE/current.png"
 
   # fond normal (workspace)
   awww img "$SELECTED" --transition-type center --transition-fps 165 &
