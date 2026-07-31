@@ -51,6 +51,7 @@ window-rule {
 }
 window-rule {
     match app-id="kitty"
+    open-maximized true
     background-effect {
         saturation 0.95
         blur true
@@ -216,5 +217,4 @@ layer-rule {
         blur true
     }
 }
-
 

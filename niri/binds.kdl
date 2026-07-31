@@ -1,6 +1,6 @@
 binds {
     // misc?
-    Mod+L { spawn-sh "hyprlock -c ~/.config/hyprlock/hyprlock.conf"; }
+    Mod+Shift+L { spawn-sh "hyprlock -c ~/.config/hyprlock/hyprlock.conf"; }
     super+Shift+Slash { show-hotkey-overlay; }
     super+W repeat=false { toggle-overview; }
     // super+shift+W { toggle-column-tabbed-display; }
@@ -24,7 +24,7 @@ binds {
     super+n { spawn-sh "~/.local/bin/note.sh"; }
     super+shift+n { spawn-sh "~/.local/bin/dunst.sh"; }
     super+shift+d { spawn-sh "~/.local/bin/dnd-toggle.sh"; }
-    super+S { spawn "~/.local/bin/browse.sh"; }
+    super+S { spawn "~/.local/bin/focus-spotify.sh"; }
     super+P { spawn "~/.local/bin/powermenu.sh"; }
     super+m { spawn "~/.local/bin/playerctl.sh"; }
     super+E { spawn "~/.local/bin/control.sh"; }
@@ -41,9 +41,9 @@ binds {
     super+Up    { focus-window-up; }
     super+Right { focus-column-right; }
     super+H     { focus-column-left; }
-    super+J     { focus-window-down; }
-    super+K     { focus-window-up; }
-    // super+L     { focus-column-right; }
+    super+J     { focus-workspace-down; }
+    super+K     { focus-workspace-up; }
+    super+L     { focus-column-right; }
     
     // Boundary focus
     super+Home { focus-column-first; }
@@ -145,15 +145,13 @@ binds {
     super+Shift+Equal { set-window-height "+5%"; }
 
     // === Mouse Wheel Bindings ===
-    super+Alt+WheelScrollDown       cooldown-ms=50 { focus-workspace-down; }
-    super+Alt+WheelScrollUp         cooldown-ms=50 { focus-workspace-up; }
+    super+Shift+WheelScrollDown       cooldown-ms=50 { focus-workspace-down; }
+    super+Shift+WheelScrollUp         cooldown-ms=50 { focus-workspace-up; }
     super+Shift+Alt+WheelScrollDown cooldown-ms=50 { move-column-to-workspace-down; }
     super+Shift+Alt+WheelScrollUp   cooldown-ms=50 { move-column-to-workspace-up; }
 
     super+WheelScrollDown     cooldown-ms=50 { focus-column-right; }
     super+WheelScrollUp       cooldown-ms=50 { focus-column-left; }
-    super+Shift+WheelScrollDown cooldown-ms=50 { move-column-right; }
-    super+Shift+WheelScrollUp   cooldown-ms=50 { move-column-left; }
 
     super+Ctrl+WheelScrollDown { set-column-width "-5%"; }
     super+Ctrl+WheelScrollUp   { set-column-width "+5%"; }
