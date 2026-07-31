@@ -13,15 +13,10 @@
     ],
 
     "modules-right": [
-        "custom/right",
         "cpu",
-        "custom/right",
         "temperature",
-        "custom/right",
         "memory",
-        "custom/right",
         "pulseaudio",
-        "custom/right",
         "clock"
     ],
 
@@ -51,7 +46,7 @@
 
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": " {:%H:%M}"
+        "format": "{:%H:%M}"
     },
 
     "cpu": {

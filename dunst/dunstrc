@@ -4,10 +4,11 @@ separator_color= frame
 min_icon_size = 64
 max_icon_size = 256
 gap_size = 2
-frame_color = "#5a5d6b"
+transparency = 0
+frame_color = "#675672"
 frame_width = 1
-highlight = "#e5bad8"
-font = JetBrainsMono Nerd font 13
+highlight = "#efb5df"
+font = Inter Display 13
 width = (320, 550)
 height = (50, 700)
 progress_bar = true
@@ -20,21 +21,21 @@ padding = 6
 origin = top-right
 format = "<span foreground='#8a8a8aff'>%a</span>\n<b>%s</b>\n%b"
 history_ignore = false
-
+corner_radius = 12
 [urgency_low]
-    background = "#292b31A6"
-    foreground = "#e3e1e9"
-    highlight = "#e5bad8"
+    background = "#2f2835A6"
+    foreground = "#eadfed"
+    highlight = "#efb5df"
 
 [urgency_normal]
-    background = "#292b31A6"
-    foreground = "#e3e1e9"
-    highlight = "#e5bad8"
+    background = "#2f2835A6"
+    foreground = "#eadfed"
+    highlight = "#efb5df"
 
 [urgency_critical]
     background = "#a7060fA6"
     foreground = "#ffffff"
-    highlight = "#e5bad8"
+    highlight = "#efb5df"
 
 [volume_notifications]
     appname = volume

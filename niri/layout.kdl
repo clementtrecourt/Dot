@@ -1,17 +1,13 @@
 overview {
     workspace-shadow {
-        softness 50
+        softness 150
         spread 10
-        offset x=0 y=10
+        offset x=0 y=0
         color "#131313"
     }
     backdrop-color "#1e1e2e00";
 }
 
-cursor {
-    xcursor-theme "Bibata-Original-Ice"
-    xcursor-size 35
-}
 
 layout {
     gaps 5
@@ -33,7 +29,7 @@ layout {
        default-column-width { proportion 0.5; }
        focus-ring {
           on
-          width 1.5
+          width 1
           // active-color "#cba6f7"
         }
         border {

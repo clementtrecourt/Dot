@@ -16,9 +16,6 @@ INDEX=$(
             window {
                 width: 62%;
                 height: 92%;
-                location: north west;
-                y-offset: 10;
-                x-offset: 10;
             }
             inputbar {
                 enabled: false;
@@ -26,7 +23,7 @@ INDEX=$(
             listview {
                 columns: $COLUMNS;
                 flow: horizontal;
-                spacing: 8px;
+                spacing: 0px;
             }
             element {
                 orientation: vertical;

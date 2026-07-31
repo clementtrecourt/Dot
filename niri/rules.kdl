@@ -200,3 +200,21 @@ layer-rule {
 layout {
     background-color "transparent"
 }
+
+
+window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
+}
+
+
+layer-rule {
+    match namespace="^notifications$"
+
+    geometry-corner-radius 8   // adapte à tes coins dunst si arrondis, sinon vire cette ligne
+    background-effect {
+        blur true
+    }
+}
+
+

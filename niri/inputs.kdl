@@ -1,24 +1,15 @@
 input {
     keyboard {
+      repeat-delay 150
+        repeat-rate 20
         xkb {
-            options "caps:escape"
+            layout "qwerty-fr"
+            model "pc104"
+            options "terminate:ctrl_alt_bksp"
         }
         numlock
     }
-
-    touchpad {
-        tap
-        natural-scroll
-        accel-speed 0.2
-    }
-    mouse {
-    }
-
-    trackpoint {
-   }
-    focus-follows-mouse max-scroll-amount="0%"
 }
-
 gestures {
     // hot-corners { on; }
 }

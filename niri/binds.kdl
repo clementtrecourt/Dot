@@ -1,8 +1,9 @@
 binds {
     // misc?
+    Mod+L { spawn-sh "hyprlock -c ~/.config/hyprlock/hyprlock.conf"; }
     super+Shift+Slash { show-hotkey-overlay; }
     super+W repeat=false { toggle-overview; }
-    super+shift+W { toggle-column-tabbed-display; }
+    // super+shift+W { toggle-column-tabbed-display; }
     super+Q repeat=false { close-window; }
     super+Shift+V { toggle-window-floating; }
     // super+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
@@ -18,7 +19,6 @@ binds {
     super+shift+f23 { spawn-sh "rofi -show drun"; }
     super+g { spawn-sh "rofi -show calc"; }
     // super+A { spawn-sh "~/.local/bin/record.sh"; }
-    super+E { spawn-sh "rofimoji --selector-args='-theme emoji.rasi'"; }
     super+Space { spawn "~/.local/bin/filerofi.sh"; }
     super+T { spawn-sh "~/.local/bin/todo.sh"; }
     super+n { spawn-sh "~/.local/bin/note.sh"; }
@@ -27,10 +27,11 @@ binds {
     super+S { spawn "~/.local/bin/browse.sh"; }
     super+P { spawn "~/.local/bin/powermenu.sh"; }
     super+m { spawn "~/.local/bin/playerctl.sh"; }
-    super+Escape { spawn "~/.local/bin/control.sh"; }
+    super+E { spawn "~/.local/bin/control.sh"; }
+    super+Escape { spawn "shutdown now"; }
     super+shift+P { spawn "~/.local/bin/ppd.sh"; }
     super+shift+t { spawn "~/.local/bin/tl.sh"; }
-    super+Z hotkey-overlay-title="wallpaper" { spawn "~/.local/bin/wall.sh"; }
+    super+shift+w hotkey-overlay-title="wallpaper" { spawn "~/.local/bin/wall.sh"; }
     super+shift+z { spawn-sh "~/.local/bin/rng.sh"; }
     super+B { spawn "~/.local/bin/barsel.sh"; }
 
@@ -42,7 +43,7 @@ binds {
     super+H     { focus-column-left; }
     super+J     { focus-window-down; }
     super+K     { focus-window-up; }
-    super+L     { focus-column-right; }
+    // super+L     { focus-column-right; }
     
     // Boundary focus
     super+Home { focus-column-first; }
@@ -184,4 +185,6 @@ binds {
     super+X { spawn-sh "~/.local/bin/ss.sh"; }
     super+shift+X { screenshot; }
     super+shift+q { spawn-sh "hyprpicker | wl-copy"; }
+    Mod+WheelScrollDown { focus-column-right; }
+    Mod+WheelScrollUp { focus-column-left; }
 }
