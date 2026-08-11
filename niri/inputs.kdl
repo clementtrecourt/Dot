@@ -1,7 +1,7 @@
 input {
     keyboard {
-      repeat-delay 150
-        repeat-rate 20
+      repeat-delay 300
+        repeat-rate 50
         xkb {
             layout "qwerty-fr"
             model "pc104"

@@ -18,3 +18,5 @@ hotkey-overlay {
 }
 
 screenshot-path "~/pics/ss/%d-%m-%Y_%H:%M.png"
+
+include "noctalia.kdl"

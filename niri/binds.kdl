@@ -9,22 +9,20 @@ binds {
     // super+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
     // apps
-    super+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+    super+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Super+shift+return { spawn "kitty" "--class" "kittyfloat"; }
     super+c { spawn-sh "kitty --class calcurse zsh -c 'calcurse'"; }
     Super+V { spawn "kitty" "--class" "clipse" "-e" "clipse"; }
 
     // === Launchers, Menus & Custom Scripts ===
-    super+A { spawn "rofi" "-show" "drun"; }
     super+shift+f23 { spawn-sh "rofi -show drun"; }
     super+g { spawn-sh "rofi -show calc"; }
     // super+A { spawn-sh "~/.local/bin/record.sh"; }
     super+Space { spawn "~/.local/bin/filerofi.sh"; }
-    super+T { spawn-sh "~/.local/bin/todo.sh"; }
+    // super+T { spawn-sh "~/.local/bin/todo.sh"; }
     super+n { spawn-sh "~/.local/bin/note.sh"; }
     // super+shift+n { spawn-sh "~/.local/bin/dunst.sh"; }
     super+shift+d { spawn-sh "~/.local/bin/dnd-toggle.sh"; }
-    super+S { spawn "~/.local/bin/focus-spotify.sh"; }
     super+P { spawn "~/.local/bin/powermenu.sh"; }
     super+m { spawn "~/.local/bin/playerctl.sh"; }
     super+E { spawn "~/.local/bin/control.sh"; }
@@ -127,7 +125,6 @@ binds {
     // Consume / Expel windows
     super+BracketLeft  { consume-or-expel-window-left; }
     super+BracketRight { consume-or-expel-window-right; }
-    super+Comma  { consume-window-into-column; }
     super+Period { expel-window-from-column; }
 
     // Sizing presets & modes
@@ -161,11 +158,6 @@ binds {
     super+shift+n  allow-when-locked=true { spawn-sh "playerctl previous"; }
     super+shift+m  allow-when-locked=true { spawn-sh "playerctl next"; }
 
-    XF86AudioRaiseVolume { spawn "~/.local/bin/dunstvol.sh" "up"; }
-    XF86AudioLowerVolume { spawn "~/.local/bin/dunstvol.sh" "down"; }
-    XF86AudioMute        { spawn "~/.local/bin/dunstvol.sh" "mute"; }
-    XF86MonBrightnessUp   { spawn "~/.local/bin/dunstback.sh" "up"; }
-    XF86MonBrightnessDown { spawn "~/.local/bin/dunstback.sh" "down"; }
 
     f3 { spawn "~/.local/bin/dunstvol.sh" "up"; }
     f2 { spawn "~/.local/bin/dunstvol.sh" "down"; }
@@ -184,4 +176,23 @@ binds {
     super+shift+q { spawn-sh "hyprpicker | wl-copy"; }
     Mod+WheelScrollDown { focus-column-right; }
     Mod+WheelScrollUp { focus-column-left; }
+
+
+
+
+
+    //NOCTAALIA 
+    // Core Noctalia binds
+    Mod+A { spawn-sh "noctalia msg panel-toggle launcher"; }
+    Mod+S { spawn-sh "noctalia msg panel-toggle control-center"; }
+    Mod+Comma { spawn-sh "noctalia msg settings-toggle"; }
+    Alt+Tab { spawn-sh "noctalia msg window-switcher"; }
+    // Niri has a built-in window switcher you might want to try it to see which one you prefer.
+
+    // Audio & Brightness
+    XF86AudioRaiseVolume { spawn-sh "noctalia msg volume-up"; }
+    XF86AudioLowerVolume { spawn-sh "noctalia msg volume-down"; }
+    XF86AudioMute { spawn-sh "noctalia msg volume-mute"; }
+    XF86MonBrightnessUp { spawn-sh "noctalia msg brightness-up"; }
+    XF86MonBrightnessDown { spawn-sh "noctalia msg brightness-down"; }
 }
