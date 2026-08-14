@@ -12,7 +12,6 @@ binds {
     super+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Super+shift+return { spawn "kitty" "--class" "kittyfloat"; }
     super+c { spawn-sh "kitty --class calcurse zsh -c 'calcurse'"; }
-    Super+V { spawn "kitty" "--class" "clipse" "-e" "clipse"; }
 
     // === Launchers, Menus & Custom Scripts ===
     super+shift+f23 { spawn-sh "rofi -show drun"; }
@@ -23,13 +22,12 @@ binds {
     super+n { spawn-sh "~/.local/bin/note.sh"; }
     // super+shift+n { spawn-sh "~/.local/bin/dunst.sh"; }
     super+shift+d { spawn-sh "~/.local/bin/dnd-toggle.sh"; }
-    super+P { spawn "~/.local/bin/powermenu.sh"; }
     super+m { spawn "~/.local/bin/playerctl.sh"; }
     super+E { spawn "~/.local/bin/control.sh"; }
     super+Escape { spawn "shutdown now"; }
     super+shift+P { spawn "~/.local/bin/ppd.sh"; }
     super+shift+t { spawn "~/.local/bin/tl.sh"; }
-    super+shift+w hotkey-overlay-title="wallpaper" { spawn "~/.local/bin/wall.sh"; }
+
     super+shift+z { spawn-sh "~/.local/bin/rng.sh"; }
     super+B { spawn "~/.local/bin/barsel.sh"; }
 
@@ -183,6 +181,9 @@ binds {
 
     //NOCTAALIA 
     // Core Noctalia binds
+    Mod+V { spawn-sh "noctalia msg panel-toggle clipboard"; }
+    Mod+Shift+W { spawn-sh "noctalia msg panel-toggle wallpaper"; }
+    Mod+P { spawn-sh "noctalia msg screenshot-region"; }
     Mod+A { spawn-sh "noctalia msg panel-toggle launcher"; }
     Mod+S { spawn-sh "noctalia msg panel-toggle control-center"; }
     Mod+Comma { spawn-sh "noctalia msg settings-toggle"; }
