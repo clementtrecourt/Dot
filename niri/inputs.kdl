@@ -10,6 +10,9 @@ input {
         numlock
     }
 }
+
 gestures {
-    // hot-corners { on; }
+    hot-corners {
+        top-right
+    }
 }
