@@ -40,7 +40,7 @@ binds {
     super+J     { focus-workspace-down; }
     super+K     { focus-workspace-up; }
     super+L     { focus-column-right; }
-    
+
     // Boundary focus
     super+Home { focus-column-first; }
     super+End  { focus-column-last; }
@@ -179,7 +179,7 @@ binds {
 
 
 
-    //NOCTAALIA 
+    //NOCTAALIA
     // Core Noctalia binds
     Mod+V { spawn-sh "noctalia msg panel-toggle clipboard"; }
     Mod+Shift+W { spawn-sh "noctalia msg panel-toggle wallpaper"; }
